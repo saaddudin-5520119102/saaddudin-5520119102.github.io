@@ -1,0 +1,147 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      flex-wrap: wrap;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    .jumbotron {
+/*      background: #e3e3e3;*/
+/*      background: #dceeff;*/
+/*      background: #e4ecd9;*/
+/*      background: #f1f1f1;*/
+/*      background: #f9e8df;*/
+      color: #f9e8df;
+      background: #cdb891;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 60px 40px;
+      position: relative;
+    }
+    .jumbotron .text {
+/*      font-size: 2em;*/
+      font-size: 3em;
+      width: 55%;
+      animation: fadeIn 2s ease-in-out;
+      font-weight: 700;
+    }
+    .jumbotron .image {
+      width: 35%;
+    }
+    .jumbotron .image img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .jumbotron .image img:hover {
+      transform: scale(1.05);
+    }
+    .animated-text::before {
+      content: "I Am A Website Developer";
+      animation: changeText 9s infinite;
+      display: inline-block;
+    }
+    @keyframes changeText {
+      0%, 33% {
+        content: "I Am A Website Developer...";
+      }
+      34%, 66% {
+        content: "I Am A Video Editor...";
+      }
+      67%, 100% {
+        content: "I Am A Graphic Designer...";
+      }
+    }
+    .content-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px;
+      background: white;
+    }
+    .box {
+      background: #fafafa;
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 30%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .box h3 {
+      margin-bottom: 10px;
+    }
+    .box a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .box a:hover {
+      text-decoration: underline;
+    }
+    .social-media {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+    .social-media a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-media a:hover {
+      color: #00aced;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .jumbotron {
+        flex-direction: column;
+        text-align: center;
+      }
+      .jumbotron .text, .jumbotron .image {
+        width: 100%;
+      }
+      .content-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .box {
+        width: 80%;
+      }
+    }
