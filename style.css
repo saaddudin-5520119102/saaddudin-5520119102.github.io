@@ -1,147 +1,183 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      flex-wrap: wrap;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li {
-      cursor: pointer;
-    }
-    .jumbotron {
-/*      background: #e3e3e3;*/
-/*      background: #dceeff;*/
-/*      background: #e4ecd9;*/
-/*      background: #f1f1f1;*/
-/*      background: #f9e8df;*/
-      color: #f9e8df;
-      background: #cdb891;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 60px 40px;
-      position: relative;
-    }
-    .jumbotron .text {
-/*      font-size: 2em;*/
-      font-size: 3em;
-      width: 55%;
-      animation: fadeIn 2s ease-in-out;
-      font-weight: 700;
-    }
-    .jumbotron .image {
-      width: 35%;
-    }
-    .jumbotron .image img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .jumbotron .image img:hover {
-      transform: scale(1.05);
-    }
-    .animated-text::before {
-      content: "I Am A Website Developer";
-      animation: changeText 9s infinite;
-      display: inline-block;
-    }
-    @keyframes changeText {
-      0%, 33% {
-        content: "I Am A Website Developer...";
-      }
-      34%, 66% {
-        content: "I Am A Video Editor...";
-      }
-      67%, 100% {
-        content: "I Am A Graphic Designer...";
-      }
-    }
-    .content-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 40px;
-      background: white;
-    }
-    .box {
-      background: #fafafa;
-      border: 1px solid #ccc;
-      padding: 20px;
-      width: 30%;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .box:hover {
-      transform: translateY(-5px);
-    }
-    .box h3 {
-      margin-bottom: 10px;
-    }
-    .box a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #0066cc;
-      text-decoration: none;
-    }
-    .box a:hover {
-      text-decoration: underline;
-    }
-    .social-media {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-    }
-    .social-media a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .social-media a:hover {
-      color: #00aced;
-    }
+/* Reset & Base */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
 
-    /* Responsiveness */
-    @media (max-width: 768px) {
-      .jumbotron {
-        flex-direction: column;
-        text-align: center;
-      }
-      .jumbotron .text, .jumbotron .image {
-        width: 100%;
-      }
-      .content-section {
-        flex-direction: column;
-        align-items: center;
-      }
-      .box {
-        width: 80%;
-      }
-    }
+		body {
+			background-color: #f4f4f4;
+		}
+
+		/* Header Styles */
+		.topNav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			background-color: #333;
+			color: white;
+			flex-wrap: wrap;
+		}
+
+		.topNavHome {
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		.topNavOptions ul {
+			list-style: none;
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.topNavOptions li {
+			cursor: pointer;
+			padding: 10px 15px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease, transform 0.2s ease;
+		}
+
+		.topNavOptions li:hover {
+			background-color: #555;
+			transform: scale(1.05);
+		}
+
+		.topNavOptions li:active {
+			background-color: #777;
+			transform: scale(0.95);
+		}
+
+		/* Jumbotron Styles */
+		.jumbotron {
+			/*display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 50px 20px;
+			background-color: #eaeaea;
+			gap: 20px;*/
+
+			position: relative;
+			background-image: url("images/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg");
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			min-height: 400px;
+			overflow: hidden;
+		}
+
+		.overlay {
+		  	position: absolute;
+		  	top: 0;
+		  	left: 0;
+		  	right: 0;
+		  	bottom: 0;
+		  	background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+		  	z-index: 1;
+		}
+
+		.content {
+		  	position: relative;
+		  	z-index: 2;
+		  	padding: 50px;
+		  	color: #222;
+		  	width: 100%;
+
+		  	display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 50px 20px;
+/*			background-color: #eaeaea;*/
+			gap: 20px;
+			height: 100%;
+		}
+
+		.textAnimated {
+			width: 60%;
+			position: relative;
+			height: 200px;
+/*			overflow: hidden;*/
+			overflow: visible;
+			flex: 1 1 300px;
+		}
+
+		.textAnimated > div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			transform: translateX(-50px);
+			transition: opacity 1s ease, transform 1s ease;
+			padding: 20px;
+		}
+
+		.textAnimated > div h1{
+			font-size: 50px;
+		}
+
+		.textAnimated > div p{
+			font-size: 30px;
+		}
+
+		.textAnimated > div.active {
+			opacity: 1;
+			transform: translateX(0);
+			z-index: 1;
+		}
+
+		.imageProfile {
+			width: 35%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 1 1 250px;
+			margin-bottom: -50px;
+		}
+
+		.imageProfile img {
+			max-width: 90%;
+			height: auto;
+			border-radius: 20px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			object-fit: contain;
+		}
+
+		/* Responsive Media Queries */
+		@media (max-width: 768px) {
+			.jumbotron {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.textAnimated,
+			.imageProfile {
+				width: 100%;
+			}
+
+			.textAnimated h1 {
+				font-size: 20px;
+			}
+
+			.textAnimated p {
+				font-size: 16px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.topNavOptions ul {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.topNav {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
