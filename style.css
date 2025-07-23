@@ -175,8 +175,16 @@
 		/* Responsive Media Queries */
 		@media (max-width: 768px) {
 			.jumbotron {
-				flex-direction: column;
+/*				flex-direction: column;*/
+				flex-direction: row;
 				text-align: center;
+/*				height: 100vh;*/
+				background-color: pink;
+				background-size: cover;
+			}
+
+			.content {
+				flex-direction: column;
 			}
 
 			.textAnimated,
@@ -194,6 +202,12 @@
 		}
 
 		@media (max-width: 480px) {
+			.jumbotron {
+/*				height: 50vh;*/
+				background-color: pink;
+				background-size: cover;
+			}
+
 			.topNavOptions ul {
 				flex-direction: column;
 				align-items: flex-start;
@@ -203,5 +217,13 @@
 			.topNav {
 				flex-direction: column;
 				align-items: flex-start;
+			}
+
+			.textAnimated > div h1{
+			font-size: 40px;
+			}
+
+			.textAnimated > div p{
+				font-size: 20px;
 			}
 		}
