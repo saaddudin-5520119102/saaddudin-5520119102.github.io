@@ -119,8 +119,30 @@
 		}
 
 		.emphasize1 {
-			color: #A55D3D;
+/*			color: #A55D3D;*/
+			color: #c97c5d;
 			font-size: 60px;
+		}
+
+		.textAnimated button {
+			background-color: #8A9A5B;
+			padding-left: 10px;
+			padding-right: 10px;
+			height: 40px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: none;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+			box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+			cursor: pointer;
+			transition: all 0.3s ease;
+			color: #FDFCF9;
+			margin-top: 20px;
+		}
+
+		.textAnimated button:hover {
+			box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+  			transform: translateY(-1px);
 		}
 
 		.textAnimated {
@@ -178,7 +200,6 @@
 		}
 
 		.profile {
-			background-color: hotpink;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -206,19 +227,22 @@
 				width: 100%;
 			}
 
-			.textAnimated h1 {
-				font-size: 20px;
+			.textAnimated > div h1,.emphasize1 {
+				font-size: 40px;
 			}
 
 			.textAnimated p {
 				font-size: 16px;
+			}
+
+			.content {
+				padding: 20px 20px;
 			}
 		}
 
 		@media (max-width: 480px) {
 			.jumbotron {
 /*				height: 50vh;*/
-				background-color: pink;
 				background-size: cover;
 			}
 
@@ -233,8 +257,8 @@
 				align-items: flex-start;
 			}
 
-			.textAnimated > div h1{
-			font-size: 40px;
+			.textAnimated > div h1, .emphasize1{
+			font-size: 35px;
 			}
 
 			.textAnimated > div p{
