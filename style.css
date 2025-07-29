@@ -199,7 +199,6 @@
 		}
 
 		.profile {
-			background-color: hotpink;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -227,19 +226,22 @@
 				width: 100%;
 			}
 
-			.textAnimated h1 {
-				font-size: 20px;
+			.textAnimated > div h1,.emphasize1 {
+				font-size: 40px;
 			}
 
 			.textAnimated p {
 				font-size: 16px;
+			}
+
+			.content {
+				padding: 20px 20px;
 			}
 		}
 
 		@media (max-width: 480px) {
 			.jumbotron {
 /*				height: 50vh;*/
-				background-color: pink;
 				background-size: cover;
 			}
 
@@ -254,8 +256,8 @@
 				align-items: flex-start;
 			}
 
-			.textAnimated > div h1{
-			font-size: 40px;
+			.textAnimated > div h1, .emphasize1{
+			font-size: 35px;
 			}
 
 			.textAnimated > div p{
