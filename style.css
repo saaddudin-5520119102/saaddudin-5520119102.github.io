@@ -118,6 +118,11 @@
 			height: 100%;
 		}
 
+		.emphasize1 {
+			color: #A55D3D;
+			font-size: 60px;
+		}
+
 		.textAnimated {
 			width: 60%;
 			position: relative;
@@ -172,6 +177,15 @@
 			object-fit: contain;
 		}
 
+		.profile {
+			background-color: hotpink;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px 15px;
+		}
+
 		/* Responsive Media Queries */
 		@media (max-width: 768px) {
 			.jumbotron {
@@ -179,7 +193,7 @@
 				flex-direction: row;
 				text-align: center;
 /*				height: 100vh;*/
-				background-color: pink;
+/*				background-color: pink;*/
 				background-size: cover;
 			}
 
